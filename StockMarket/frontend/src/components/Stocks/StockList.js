@@ -6,7 +6,7 @@ function StockList() {
   const [sortOption, setSortOption] = useState('name'); // Default sort option
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/stocks', {
+    fetch('http://3.80.42.39:8000/api/stocks', {
       method: 'GET',
       headers: {
         'Authorization': `Token ${localStorage.getItem('token')}`,
