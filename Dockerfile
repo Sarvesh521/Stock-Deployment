@@ -29,6 +29,10 @@ COPY . /app/
 # Change working directory to the StockMarket folder
 WORKDIR /app/StockMarket
 
+# Collect stocks data
+RUN python manage.py import_all_csv dataset  
+
+
 # Run Django migrations
 RUN python manage.py makemigrations && python manage.py migrate
 
