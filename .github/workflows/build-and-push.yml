@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
@@ -40,7 +40,7 @@ jobs:
         key: ${{ secrets.SSH_PASSWORD }}
         script: |
             echo "Changing to deployment directory..."
-            cd Stock-Market
+            cd Stock-Deployment
             echo "Pulling latest code..."
             git pull origin main
             echo "Stopping existing containers..."
