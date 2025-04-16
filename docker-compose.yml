@@ -2,7 +2,7 @@ services:
 
   djangoapp:
     container_name: stockmarket
-    image: sarvesh717/stocks:v4
+    image: sarvesh717/stocks:v5
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app

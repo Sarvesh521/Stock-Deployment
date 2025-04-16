@@ -21,7 +21,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: sarvesh717/stocks
-        tags: v4
+        tags: v5
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -43,8 +43,6 @@ jobs:
             cd Stock-Deployment
             echo "Pulling latest code..."
             git pull origin main
-            echo "Stopping existing containers..."
-            sudo docker-compose down
             echo "Pulling latest images..."
             sudo docker-compose pull
             echo "Starting containers..."
