@@ -15,7 +15,7 @@ jobs:
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10
+        python-version: '3.10'
     - name: Build and push Docker image
       id: build_push
       uses: mr-smithers-excellent/docker-build-push@v6
